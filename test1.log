@@ -1,0 +1,933 @@
+Unity Editor version:    6000.5.9f1 (b57deb96f08d)
+Branch:                  6000.5/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 15.7.3 (Build 24G419)
+Darwin version:          24.6.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        24576 MB
+Date:                    2026-11-02T01:42:18Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-nmoff" at "2026-11-02T01:42:18.332687Z"
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-projectPath
+/Users/nmoff/chillhop-crate
+-executeMethod
+ChillhopTest.Run
+-chillhopTest
+-logFile
+test1.log
+Successfully changed project path to: /Users/nmoff/chillhop-crate
+/Users/nmoff/chillhop-crate
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [8729961024]  Target information:
+
+Player connection [8729961024]  * "[IP] 192.168.1.192 [Port] 55504 [Flags] 2 [Guid] 3204321840 [EditorId] 3204321840 [Version] 1048832 [Id] OSXEditor(0,Mac.attlocal.net) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8729961024]  * "[IP] 100.82.153.53 [Port] 55504 [Flags] 2 [Guid] 3204321840 [EditorId] 3204321840 [Version] 1048832 [Id] OSXEditor(0,Mac.attlocal.net) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8729961024] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8729961024] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-68251" after 0.1 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              dce57bf5790f40b7a178e71663e7cc65
+  Correlation Id:          560a80fc7fec1ce5ee7aa6c9ed11f762
+  External correlation Id: 4534557438562333650
+  Machine Id:              Uqqg+MiW77xs5TVPZRxNYq4BbLM=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-nmoff" (connect: 0.00s, validation: 0.00s, handshake: 0.20s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-nmoff-notifications" at "2026-11-02T01:42:18.537304Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475920745733-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.21s
+[Licensing::Module] Licensing is initialized (took 0.03s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Initialize engine version: 6000.5.9f1 (b57deb96f08d)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/nmoff/chillhop-crate/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+ preferred device: Apple M4 Pro (high power)
+Metal devices available: 1
+0: Apple M4 Pro (high power)
+Using device Apple M4 Pro (high power)
+Initializing Metal device caps: Apple M4 Pro
+Mac GPU Family: 2
+Apple GPU Family: 9
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = '/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56251
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.9f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.9f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.000939 seconds.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.233 seconds
+Domain Reload Profiling: 445ms
+	BeginReloadAssembly (43ms)
+		CreateAndSetChildDomain (12ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (134ms)
+		LoadAssemblies (32ms)
+		AnalyzeDomain (102ms)
+			TypeCache.Refresh (101ms)
+				TypeCache.ScanAssembly (92ms)
+	FinalizeReload (233ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (38ms)
+			ProcessInitializeOnLoadAttributes (41ms)
+			ProcessInitializeOnLoadMethodAttributes (116ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 62 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ide.rider@3.0.38 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.xr.interaction.toolkit@3.6.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.interaction.toolkit@c7557c6c9ee4)
+    com.unity.xr.management@4.7.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.management@2ad85c7dd480)
+    com.unity.xr.meta-openxr@2.6.1 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28)
+    com.unity.xr.openxr@1.18.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.openxr@b5b77b4027be)
+    com.unity.xr.hands@1.7.3 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.hands@3e241be20642)
+    com.unity.searcher@4.9.5 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.searcher@a463122f2c00)
+    com.unity.xr.core-utils@2.6.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.core-utils@a8b900321199)
+    com.unity.xr.legacyinputhelpers@3.0.1 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.legacyinputhelpers@3f62d634f63b)
+    com.unity.xr.arfoundation@6.6.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.arfoundation@41a353b6038b)
+    com.unity.xr.compositionlayers@2.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.compositionlayers@2843cb312e13)
+    com.unity.burst@1.8.30 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.burst@2f3d916873ea)
+    com.unity.editorcoroutines@1.1.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.editorcoroutines@87a15ed012c2)
+    com.unity.nuget.mono-cecil@1.11.6 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.render-pipelines.universal@d7774c218bdf)
+    com.unity.test-framework@1.7.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.ugui@1c4864518158)
+    com.unity.modules.accessibility@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.xr)
+    com.unity.shadergraph@17.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.shadergraph@8d7376ec43ee)
+    com.unity.render-pipelines.core@17.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.render-pipelines.core@a4c9a9793789)
+    com.unity.mathematics@1.4.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.mathematics@981956d94fb6)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.collections@6.5.0 (location: /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.collections@ec2c217e4cb2)
+[Subsystems] Looking for new subsystems at path /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28
+[Subsystems] Novel subsystem found at Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28/Runtime/UnitySubsystemsManifest.json
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/nmoff/chillhop-crate/Assets
+[Subsystems] Discovering subsystems at path /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28
+[Subsystems] No descriptors matched for  examples in Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] No descriptors matched for  inputs in Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] No descriptors matched for  displays in Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] 1 'meshings' descriptors matched in Library/PackageCache/com.unity.xr.meta-openxr@20c9b19f5e28/Runtime/UnitySubsystemsManifest.json
+[Subsystems] Discovering subsystems at path /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.openxr@b5b77b4027be
+[Subsystems] No descriptors matched for  examples in Library/PackageCache/com.unity.xr.openxr@b5b77b4027be/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] 1 'inputs' descriptors matched in Library/PackageCache/com.unity.xr.openxr@b5b77b4027be/Runtime/UnitySubsystemsManifest.json
+[Subsystems] 1 'displays' descriptors matched in Library/PackageCache/com.unity.xr.openxr@b5b77b4027be/Runtime/UnitySubsystemsManifest.json
+[Subsystems] No descriptors matched for  meshings in Library/PackageCache/com.unity.xr.openxr@b5b77b4027be/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] Discovering subsystems at path /Users/nmoff/chillhop-crate/Library/PackageCache/com.unity.xr.arfoundation@41a353b6038b
+[Subsystems] No descriptors matched for  examples in Library/PackageCache/com.unity.xr.arfoundation@41a353b6038b/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] 1 'inputs' descriptors matched in Library/PackageCache/com.unity.xr.arfoundation@41a353b6038b/Runtime/UnitySubsystemsManifest.json
+[Subsystems] No descriptors matched for  displays in Library/PackageCache/com.unity.xr.arfoundation@41a353b6038b/Runtime/UnitySubsystemsManifest.json.
+[Subsystems] 1 'meshings' descriptors matched in Library/PackageCache/com.unity.xr.arfoundation@41a353b6038b/Runtime/UnitySubsystemsManifest.json
+[Package Manager] Done registering packages in 0.01 seconds
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-dcece6cd04597d073a7807cf3f9eef6f
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/nmoff/chillhop-crate
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 12.2280ms
+Starting: /Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/nmoff/chillhop-crate
+DisplayProgressbar: Compiling Scripts
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.burst@2f3d916873ea/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Mono.Cecil, Version=0.11.5.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 11.5370ms
+ExitCode: 0 Duration: 0s277ms
+[ 886/1178  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.26 seconds), 1 items updated, 1178 evaluated
+AssetDatabase: script compilation time: 0.550762s
+Begin MonoManager ReloadAssembly
+Total cache size 267917130
+Total cache size after purge 267917130, took 00:00:00.0979642
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.839 seconds
+Domain Reload Profiling: 2161ms
+	BeginReloadAssembly (93ms)
+		DisableScriptedObjects (9ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (200ms)
+		LoadAssemblies (90ms)
+		AnalyzeDomain (85ms)
+			TypeCache.Refresh (59ms)
+				TypeCache.ScanAssembly (52ms)
+			BuildScriptInfoCaches (22ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1840ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (38ms)
+			ProcessInitializeOnLoadAttributes (1521ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Starting new worker id: 0 with log in /Users/nmoff/chillhop-crate/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=1da65b8f9abbc4ca88c20f9436317330): Total: 3.308 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2364 ms
+		Asset DB Callback time: managed=23 ms, native=9 ms
+		Scripting: domain reloads=1, domain reload time=334 ms, compile time=551 ms, other=25 ms
+		Project Asset Count: scripts=1539, non-scripts=2262
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 9.577ms
+	ApplyChangesToAssetFolders: 0.163ms
+	Scan: 343.181ms
+	Collect global state as custom dependencies: 10.050ms
+	CategorizeScriptCompilationAssets: 14.542ms
+	ProcessAssetsWithTransientArtifactChanges: 34.303ms
+	CategorizeAssets: 34.883ms
+	CompileScripts: 551.353ms
+	ImportOutOfDateAssets: 1882.672ms (1851.486ms without children)
+		UnloadImportedAssets: 3.621ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.372ms
+		ImportSchedulerStart: 27.157ms
+	PostProcessAllAssets: 23.799ms
+		MonoPostProcessAllAssets: 23.778ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 6.435ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.136ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.962ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.449ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.348ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.190ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.163ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.128ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.106ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.094ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.090ms
+	UnloadStreamsBegin: 0.704ms
+	PersistCurrentRevisions: 0.079ms
+	GenerateScriptTypeHashes: 2.826ms
+	GenerateScriptTypeSerializationHashes: 5.100ms
+	Untracked: 401.562ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.9f1/Unity.app/Contents/Helpers/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 0.024ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-The Chillhop Crate
+2026-11-01 20:42:22.982 Unity[68251:4629288] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600002b9bf00 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Unloading 105 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5862 unused Assets / (14.3 MB). Loaded Objects now: 6889.
+Memory consumption went from 275.0 MB to 260.6 MB.
+Total: 15.034917 ms (FindLiveObjects: 0.292042 ms CreateObjectMapping: 1.084791 ms MarkObjects: 9.409459 ms  DeleteObjects: 4.247959 ms)
+
+Opening scene 'Assets/Scenes/ChillhopCrate.unity'
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/ChillhopCrate.unity'
+	Deserialize:            28.556 ms
+	Integration:            174.827 ms
+	Integration of assets:  0.747 ms
+	Thread Wait Time:       -0.000 ms
+	Total Operation Time:   204.130 ms
+Unloading 3 unused Assets / (Unknown). Loaded Objects now: 8211.
+Memory consumption went from 238.7 MB to 239.0 MB.
+Total: 10.854167 ms (FindLiveObjects: 0.253000 ms CreateObjectMapping: 0.503875 ms MarkObjects: 10.044209 ms  DeleteObjects: 0.052875 ms)
+
+Worker ready: AssetImportWorkerHW0 0
+[Project] Loading completed in 4.968 seconds
+	Project init time: 				4.250 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.133 seconds
+		Asset Database init time: 		0.106 seconds
+		Global illumination init time: 	0.000 seconds
+		Assemblies load time: 			0.457 seconds
+		Unity extensions init time: 	0.018 seconds
+		Asset Database refresh time: 	3.308 seconds
+	Scene opening time: 			0.663 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1793583743298,"processId":68251,"projectLoad":4.967825875,"projectInit":4.249924209,"templateInit":0.0,"packageManagerInit":0.132603292,"assetDatabaseInit":0.105702458,"globalIlluminationInit":0.000488792,"assembliesLoad":0.456777292,"unityExtensionsInit":0.018167,"assetDatabaseRefresh":3.308312875,"sceneOpening":0.663482584}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1793583743298,"processId":68251,"editorVersion":"6000.5.9f1 (b57deb96f08d)","branch":"6000.5/staging","buildType":"Release","platform":"OSX"}
+Subscribe to USB device events
+Thread 0x393f47000 may have been prematurely finalized
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.683 seconds
+Domain Reload Profiling: 988ms
+	BeginReloadAssembly (203ms)
+		DisableScriptedObjects (10ms)
+		CreateAndSetChildDomain (142ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (74ms)
+		LoadAssemblies (34ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (3ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (684ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (38ms)
+			ProcessInitializeOnLoadAttributes (324ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
+		AwakeInstancesAfterBackupRestoration (77ms)
+No restricted APIs configured; Validation skipped.
+Checking 12 assemblies for restricted APIs found 0 usage(s) in 2 ms
+
+Asset Pipeline Refresh (id=47d188598116d4beebe3e59adc023794): Total: 1.463 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=836 ms
+		Asset DB Callback time: managed=247 ms, native=65 ms
+		Scripting: domain reloads=1, domain reload time=313 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1539, non-scripts=2262
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.423ms
+	ApplyChangesToAssetFolders: 0.146ms
+	Collect global state as custom dependencies: 1.028ms
+	ProcessAssetsWithTransientArtifactChanges: 66.201ms
+	CategorizeAssets: 34.397ms
+	CompileScripts: 0.466ms
+	ImportOutOfDateAssets: 714.574ms (692.336ms without children)
+		CollectScriptTypesHashes: 1.134ms
+		ReloadNativeAssets: 0.843ms
+		UnloadImportedAssets: 0.124ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.308ms
+		ImportSchedulerStart: 20.947ms
+	PostProcessAllAssets: 310.406ms
+		AssemblyValidation.PostprocessAllAssets 7.591ms
+		PostProcessCallbackCreateDeferredMaterials 7.256ms
+		ShaderAssetModifiedCallback 4.558ms
+		RaytracingShaderImportPostprocess 4.497ms
+		ComputeShaderImportPostprocess 4.024ms
+		SpeedTreeImporter.PostprocessAllAssets 3.536ms
+		BlockShaderImporter.PostprocessAllAssets 2.122ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 1.821ms
+		XRBuildSystem.XRAssetImported 0.232ms
+		MonoPostProcessAllAssets: 246.537ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 77.998ms
+			AssetPostprocessor.OnPostprocessAllAssets 39.518ms
+			PostProcessor.OnPostprocessAllAssets 20.665ms
+			MaterialPostprocessor.OnPostprocessAllAssets 14.930ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 14.785ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 14.737ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 8.521ms
+			AssetCallbacks.OnPostprocessAllAssets 6.706ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 6.389ms
+			AssetChangedListener.OnPostprocessAllAssets 5.802ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 4.380ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 3.153ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.983ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.637ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.953ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.735ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.199ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.133ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.129ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.118ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.115ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.113ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.109ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.103ms
+			AssetEvents.OnPostprocessAllAssets 0.101ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.099ms
+			EnvironmentAssetPostprocessor.OnPostprocessAllAssets 0.075ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.071ms
+			SyncVS.PostprocessSyncProject 0.066ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.052ms
+	PostAssetChangesProfiler: 2.128ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.066ms
+	UnloadStreamsBegin: 0.177ms
+	PersistCurrentRevisions: 0.078ms
+	GenerateScriptTypeHashes: 3.519ms
+	GenerateScriptTypeSerializationHashes: 5.761ms
+	Untracked: 329.356ms
+
+The referenced script on this Behaviour (Game Object 'Hand Visualizer') is missing!
+The referenced script on this Behaviour (Game Object 'Hand Visualizer') is missing!
+The referenced script on this Behaviour (Game Object 'Hand Visualizer') is missing!
+The XRHandSkeletonDriver requires an XRHandTrackingEvents component to subscribe to hand tracking events.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.XR.Hands.XRHandSkeletonDriver:OnEnable () (at ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs:192)
+
+(Filename: ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs Line: 192)
+
+The XRHandSkeletonDriver requires an XRHandTrackingEvents component to subscribe to hand tracking events.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.XR.Hands.XRHandSkeletonDriver:OnEnable () (at ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs:192)
+
+(Filename: ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs Line: 192)
+
+The XRHandSkeletonDriver requires an XRHandTrackingEvents component to subscribe to hand tracking events.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.XR.Hands.XRHandSkeletonDriver:OnEnable () (at ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs:192)
+
+(Filename: ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs Line: 192)
+
+The XRHandSkeletonDriver requires an XRHandTrackingEvents component to subscribe to hand tracking events.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.XR.Hands.XRHandSkeletonDriver:OnEnable () (at ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs:192)
+
+(Filename: ./Library/PackageCache/com.unity.xr.hands@3e241be20642/Runtime/XRHandSkeletonDriver.cs Line: 192)
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            15.562 ms
+	Integration:            170.733 ms
+	Integration of assets:  1.316 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   187.615 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Importing 'GUID: fa69697be3070b04a893666f5947f18c - Path: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Runtime UI Resources/RuntimeDebugWindow_PanelSettings.asset' with importer (NativeFormatImporter)
+Imported 'GUID: fa69697be3070b04a893666f5947f18c' -> (Import Result ID: 'fd610f758162a52f34740bf6a6be4665') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=5726e19063be2ee1c1db3057114932de DependenciesID=feb851286da18cac9ed6104d4b6b1f61 StaticDependenciesID=486b33165844de05fe79785c8a0aa636 
+The following asset(s) located in immutable packages were unexpectedly altered. Making changes to immutable packages isn't recommended because the changes can be lost without any warning during Package Manager operations.
+  Packages/com.unity.render-pipelines.core/Runtime/Debugging/Runtime UI Resources/RuntimeDebugWindow_PanelSettings.asset
+Asset Pipeline Refresh (id=cb0574b7992be47608db7c6f626e2e05): Total: 0.051 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Material Pipeline Handlers have updated 26 material asset(s).
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:SetPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:149)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:AutoRefreshPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:98)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation:RefreshMaterialPipelineHandlers () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:22)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation/<>c:<.cctor>b__1_0 () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:31)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions () (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:418)
+
+(Filename: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs Line: 149)
+
+Material Pipeline Handlers have updated 1 material asset(s).
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:SetPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:149)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:AutoRefreshPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:98)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation:RefreshMaterialPipelineHandlers () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:22)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation/<>c:<.cctor>b__1_0 () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:31)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions () (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:418)
+
+(Filename: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs Line: 149)
+
+Material Pipeline Handlers have updated 4 material asset(s).
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:SetPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:149)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:AutoRefreshPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:98)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation:RefreshMaterialPipelineHandlers () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:22)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation/<>c:<.cctor>b__1_0 () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:31)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions () (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:418)
+
+(Filename: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs Line: 149)
+
+Material Pipeline Handlers have updated 6 material asset(s).
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:SetPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:149)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler:AutoRefreshPipelineShaders () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:98)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation:RefreshMaterialPipelineHandlers () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:22)
+UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RenderPipelineValidation/<>c:<.cctor>b__1_0 () (at Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs:31)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions () (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:418)
+
+(Filename: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Scripts/MaterialPipelineHandler.cs Line: 149)
+
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__76.MoveNext () [0x00089] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/SearchDatabase.cs:347 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <cb951819652d428c85bd75cb224d8506>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <cb951819652d428c85bd75cb224d8506>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00000] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/SearchDatabase.cs:321 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000a] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchInit.cs:109 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:418 
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/SearchDatabase.cs Line: 347)
+
+Created GICache directory at /Users/nmoff/Library/Caches/com.unity3d.UnityEditor/GiCache. Took: 0.005s, timestamps: [6.757 - 6.762]
+[Licensing::Client] Successfully resolved entitlement details
+Importing 'GUID: 40808a1b89c64184e9466aaec1fd1ac1 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ChessPiece.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 40808a1b89c64184e9466aaec1fd1ac1' -> (Import Result ID: '6b5a9ba42f6e37062a2ebdd103e3e56d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f0a736a19747b1f211d02b20a4744ada DependenciesID=e66e103390bf158466390f1a3127e00d StaticDependenciesID=f4101e75a494b3abeaf8befecc0f9d29 
+Importing 'GUID: 029f8a55031eba342849aa7cc9616f2c - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/TeleportReticle.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 029f8a55031eba342849aa7cc9616f2c' -> (Import Result ID: '06617ddd39fcb67ff0699900417ba114') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=30fc5e07b2f0aecf4a219df49ccfb6b7 DependenciesID=d7f3bdcaac9feca172302012e7565aaa StaticDependenciesID=ca98a0baa591f3198de5333a0e004643 
+Importing 'GUID: 53c16fb5d5c516b40a1f6a8fc34132f3 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/AccentButton.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 53c16fb5d5c516b40a1f6a8fc34132f3' -> (Import Result ID: 'a8dc78932df0c7edbe6c4ae36256f657') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=723bfe7e71e70a32c447b5035225a853 DependenciesID=e79a039d395c8a9363f7eaad03010c36 StaticDependenciesID=9556639fb92e868b54bba1b24ff82464 
+Importing 'GUID: 73b0a23f47c95b644820e018a0ab4ea6 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentTan.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 73b0a23f47c95b644820e018a0ab4ea6' -> (Import Result ID: 'af851f0c743ec555c533416bd07b7d93') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0be17c304bab9cd7cec6606dee5f1fb3 DependenciesID=c19e545564ddde7577b0e3327a0bee18 StaticDependenciesID=fba7b42f81db28a88cd4077996035a28 
+Importing 'GUID: 830d28b607e09a2479e2005c2eb5c75e - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Concrete Light Blue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 830d28b607e09a2479e2005c2eb5c75e' -> (Import Result ID: '80ce759a8aaeed08577da27efb7982cb') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b6b4fd25693bb5202068c021b7d38fa6 DependenciesID=384bfc0e05e6a3f340e069729c638881 StaticDependenciesID=87b1e6b5daf4a51708fead96572ed2d5 
+Importing 'GUID: b3c19a119577be64885886bfcc8792fe - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Interactable White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b3c19a119577be64885886bfcc8792fe' -> (Import Result ID: '1e45c612312fda60d2b20d04b49be448') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=16bb02310fe12c390ab151e01d52fd30 DependenciesID=feec21da531884e5b71fbaba5f3b71ce StaticDependenciesID=1bd92025d6c0053e24f95a3dea4f53d3 
+Importing 'GUID: 54f7c59213ac02b4d9f00104348dbac3 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/FrameOutline.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 54f7c59213ac02b4d9f00104348dbac3' -> (Import Result ID: '8a445e524b20aae9ce4cde1923963ba0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=218915f3c40a01794b6145032fab2820 DependenciesID=b2906e678cb6e02f99efe657fb86c3a3 StaticDependenciesID=d374b7c43f2bd7f6e180476f1adff7d4 
+Importing 'GUID: 842f1b88643f1bb458ba6243088e344e - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Concrete Grey.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 842f1b88643f1bb458ba6243088e344e' -> (Import Result ID: '845ab65d03a26db18dfcd9f8f4accf8e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=36bad2d78c448e84d1b557997bf31033 DependenciesID=899fa78076e179d6e477684128c96238 StaticDependenciesID=0186d5392906348ea31bdd88ee7862bc 
+Importing 'GUID: f5ccd52dc494e054fbe7d7161dcabe25 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/FresnelHighlight.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f5ccd52dc494e054fbe7d7161dcabe25' -> (Import Result ID: 'da643d9858d5988528ae5691d0d5b294') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=d065204da63698be0a3158ecfb511429 DependenciesID=823a246e5b4163f7a5311458236b4281 StaticDependenciesID=6e1c0dd63557cd64c39f434b22a4f29f 
+Importing 'GUID: 76618f7490c40334fa7b685859587d2e - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Interactable.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 76618f7490c40334fa7b685859587d2e' -> (Import Result ID: 'c3bd060ff889f9244fec8306cfa9c651') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=78a1b1f8bf4788e126fad7122b5adafa DependenciesID=43cb578237f26ff3c70f63059df3fe3e StaticDependenciesID=9abb6c158e3e88c9fb51ad49a553f479 
+Importing 'GUID: f8b02ef1d22712f4db0746111a3d686b - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner3.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f8b02ef1d22712f4db0746111a3d686b' -> (Import Result ID: 'feaa1dc7b7e672207ff733957465e23b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=64785a6681017c0a56de50d2a127fd42 DependenciesID=88bf90ad2215cf838a5a633018c8505a StaticDependenciesID=dc606e7c9a3d7e973d33cfd7c6147343 
+Importing 'GUID: 19360606bcfcbeb429c461ec10c6ab40 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentBlueTransparent75.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 19360606bcfcbeb429c461ec10c6ab40' -> (Import Result ID: 'b283d83a296e0b30c50bdc44007b7429') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b3e1c59644400a81a6304420461a7e1a DependenciesID=4b375dbff025c2773ba9dcc0ca7e39a2 StaticDependenciesID=40bff9497148f809fddb376252dc7473 
+Importing 'GUID: 99685157b02e4d446bbecb015645e5e8 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Controller_Grey.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 99685157b02e4d446bbecb015645e5e8' -> (Import Result ID: '3b0bd51e7e487bae08e634b3489b0896') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=cda74d7e6d6aa443dca8dd5de15512e1 DependenciesID=cf4adbcded147f18d34472995c87e55b StaticDependenciesID=0335e675e69946fc39fba6e16fbc6a33 
+Importing 'GUID: c91596000a6cc4b4996417901edef94c - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ShadowCircular.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c91596000a6cc4b4996417901edef94c' -> (Import Result ID: '470a4b63b409c276ed44d2ced41cdf2f') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=639247d79bd3bacf3449419447f852a2 DependenciesID=693cd21aa1e17f665ad42eed909aff63 StaticDependenciesID=4fc9ce5c6e2a3297f3ecd8c149ccc5d5 
+Importing 'GUID: f95c205049f12cc4cb5bd57dbded286c - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Controls_Black.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f95c205049f12cc4cb5bd57dbded286c' -> (Import Result ID: 'e71740fcb4ca3b4c0b1d4fbde8a74dfb') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=5fd615560243cbee3d9afeb54bfdbab8 DependenciesID=594b2826045cad955d05260241f406fe StaticDependenciesID=07cbdb8d34b43fce8e18ab9ee64342fc 
+Importing 'GUID: 0b3e50cff38c81e4e89e8bda80582c94 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner2.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0b3e50cff38c81e4e89e8bda80582c94' -> (Import Result ID: '0818017f4b5d04a8b1c6f8a1a734aef8') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3b9c4b07bcd92387959fd919d2debed9 DependenciesID=b74f5abbfe00adb23aac87dfa83e5f62 StaticDependenciesID=6e34e2f82a091a69fe2988522409890a 
+Importing 'GUID: 5b0e69288f45e7943add774eaf2572fe - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Teleport Anchor Blue Glow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 5b0e69288f45e7943add774eaf2572fe' -> (Import Result ID: '5e0cae5fcc6a40cc1b88ad044c9b55f9') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=35dc1311f4e93170e9744d0a3a1a6d53 DependenciesID=7996a8aeede46238aedead4647eba216 StaticDependenciesID=83f19fe75ca6ab104712e90737921f87 
+Importing 'GUID: bbb56ac3cf3c61a46ab3887c0fdbda8f - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Concrete Dark Blue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: bbb56ac3cf3c61a46ab3887c0fdbda8f' -> (Import Result ID: 'bf0c827871e3a3018ec484c17e1ea5c5') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=38590e63d38dd650cf09a7a08a48fb5b DependenciesID=155312ca362e78cf44f031a239850344 StaticDependenciesID=016d54fbfcc6a764106094903ac45368 
+Importing 'GUID: cb11ed65c00b03b42be1911bd4d439f8 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentParticles.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cb11ed65c00b03b42be1911bd4d439f8' -> (Import Result ID: '0d1f8a2b9617ef33a4dddb2f70878dd0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f96f4c4d194c14ce753ad08ff4e7be89 DependenciesID=52a72b023db594195657a6be8da99f3d StaticDependenciesID=3563c95c4c10eb5be14e318834378521 
+Importing 'GUID: 2cf0bcfa476070542a4c90468fc32181 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentLightBlue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2cf0bcfa476070542a4c90468fc32181' -> (Import Result ID: '22216dcab1e58238842df9d66bb54057') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=cf9b830e72a87594bb82beb7af991be3 DependenciesID=461c87f2e8aab88f8ccf9d4d4cdafed3 StaticDependenciesID=bc7ab6e0eaf9a16642a0c63892a2bb4e 
+Importing 'GUID: 3ce47e4e69bf19e49a7d0513149e8f37 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Teleport Anchor Base.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3ce47e4e69bf19e49a7d0513149e8f37' -> (Import Result ID: '3356108cc3a579993b165997f1b11401') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f860d0e05ebb19c2605aa8c13f8e5034 DependenciesID=540c391fadc6606e2452dfd01f02d50b StaticDependenciesID=fc1ff116888b459ca7b7d2baf650456f 
+Importing 'GUID: 5c49e6dfb27f23c419a41f72612a38ae - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereShadowCaster.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 5c49e6dfb27f23c419a41f72612a38ae' -> (Import Result ID: '30f018847698a078da2bf42be0cdc465') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=9f82ced58759c3627b134080d0fc304d DependenciesID=9c876d6aac6bf05471bc8e192942d987 StaticDependenciesID=b6f3bacda17e4a4a99afe47147c7f104 
+Importing 'GUID: 6c72d2d2ead00e54db4b71b27ffb03d4 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Table Surface.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6c72d2d2ead00e54db4b71b27ffb03d4' -> (Import Result ID: 'ac64ddf015c926aaa6153df306d7d324') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=60ce9e97b6510bd827162050d75b5084 DependenciesID=c6d166bd14307fe4eafa575ffef2457e StaticDependenciesID=01b054a65c90e75ee3944d31dccbf023 
+Importing 'GUID: 8cd43e2243b7d0040858c9be02500050 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/UnityLogo.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 8cd43e2243b7d0040858c9be02500050' -> (Import Result ID: '2ebad5905b0fd5a15042da5c53ba5585') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f7bd0f0a8f43440733106b96c004005e DependenciesID=6e061feef5c3fee9e690f46c7bd80bbf StaticDependenciesID=5a67da8c46e77c50613da8d868663617 
+Importing 'GUID: dcfef278bf2f5634090b0f0ed9fac94a - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/Materials/JoystickUISprite.mat' with importer (NativeFormatImporter)
+Imported 'GUID: dcfef278bf2f5634090b0f0ed9fac94a' -> (Import Result ID: '3317d2b9b2a251b48a352d468e0a0b4b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ce74ddad56de2b110f0860483279e7d5 DependenciesID=3e5666d93837e2f5066558066dbf0e2d StaticDependenciesID=8839b792c04332f597f28dae4ff9fbdc 
+Importing 'GUID: fc226930e8fad4c499969204cecfbc05 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Lit White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fc226930e8fad4c499969204cecfbc05' -> (Import Result ID: '0e369df6578b536771f81e3d2e3cfb57') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=21f55f6305684dc1d26bc41a400717a5 DependenciesID=82e857131f5a96b77abd6519b160a13a StaticDependenciesID=761e7f78d3f0c6b598d047b64e05d65c 
+Importing 'GUID: 3d0dbe0d83151dc4c94881a85ab2ef2b - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner4.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3d0dbe0d83151dc4c94881a85ab2ef2b' -> (Import Result ID: 'ca19180141e267819f29a085f3f5b8aa') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b9cf6b293dea9a0d887c0a8ae9f11081 DependenciesID=687f44dab72e838e853bdc14b4769d7c StaticDependenciesID=60a197e028a96e83cd5ef2a7e3378612 
+Importing 'GUID: 9d73f41c7719ba2449097a8c12e0a3aa - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/BrushedMetal.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 9d73f41c7719ba2449097a8c12e0a3aa' -> (Import Result ID: '8d9b134ac9dbc5444d526fad79aec3f3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b761343a2d9813a3284960f30e10e54a DependenciesID=ba58e986de5afd7231f83aca453f27fc StaticDependenciesID=bcc6ee0a5cd2856565aa39217a30c38c 
+Importing 'GUID: fd3c5d8fce991e04f9c11109dde95b3b - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Telport Anchor.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fd3c5d8fce991e04f9c11109dde95b3b' -> (Import Result ID: '000ddadadc83c160485dacbfeb816c41') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=75d988857236db49ac70defbac59339b DependenciesID=e6b30b0e3dcb39772a75715fb36c99aa StaticDependenciesID=64d73402e7aa719e3d9fa4398e123261 
+Importing 'GUID: 2edb876ca20f6ea40b4ebb61f96f1df1 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Chrome.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2edb876ca20f6ea40b4ebb61f96f1df1' -> (Import Result ID: '33e5610d03807af64fff1434a0f86a52') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7ef86df8e6aebdaddf1b90bcfbde9be2 DependenciesID=914df894e6202727020eb5a4b6454748 StaticDependenciesID=4f4e9bc9f17c17ce438822bb9a500d13 
+Importing 'GUID: 6e402270f1d9478429bd2ae7ce7eca67 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Blue Anchor Arrow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6e402270f1d9478429bd2ae7ce7eca67' -> (Import Result ID: '6dcc556cc37e112c49301ea4538f1ad8') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=84ce7d04b787bafcbe2417db40bce699 DependenciesID=11a152aa32425471733fb34eb2fee9d5 StaticDependenciesID=a1a908c939b6936745c6564ac2461011 
+Importing 'GUID: 6e7895a83b46e8c43a748c6465dfa4a4 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentBlueTransparent50.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6e7895a83b46e8c43a748c6465dfa4a4' -> (Import Result ID: 'd2bcd955dfa09dd12d7f835e06aa682a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=97d2bd375e59a096caf9151b13a3a9cc DependenciesID=76553dcff2499dac988ffd52401d8316 StaticDependenciesID=844750c946fb0efd9076f1d329bb2306 
+Importing 'GUID: be3c68e7d11b1644d8a735236c8fd4ee - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/TeleportAnchor.mat' with importer (NativeFormatImporter)
+Imported 'GUID: be3c68e7d11b1644d8a735236c8fd4ee' -> (Import Result ID: '3c3fa2fb73825ec45b55bf4b6fa117e0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=a75812e23600e2637c7cb8c0a37d5ef9 DependenciesID=7cd4c40463eb17953bf8ca72dcf4d175 StaticDependenciesID=af0ea180506273fd872bee4e1c169a5e 
+Importing 'GUID: be1e10ce8a6f8cc4fb08d11c7f722469 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Telport Area.mat' with importer (NativeFormatImporter)
+Imported 'GUID: be1e10ce8a6f8cc4fb08d11c7f722469' -> (Import Result ID: 'cd99e1c2440864627f5c3d29de7230c3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0ecc2259ba2aadc583592709e759dea5 DependenciesID=58426304e36d6133475d86b0d004b502 StaticDependenciesID=76f1d531e2d603ca723f3ec33886fd2a 
+Importing 'GUID: 6fe37c045403f7d419765f4a583c21c7 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentBlue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6fe37c045403f7d419765f4a583c21c7' -> (Import Result ID: '2c6c6b7f71e19d1e4332dfa03183c671') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ce0f87632899377cd0d44de2451f3416 DependenciesID=0e0943e727703efaec589f98339dfad7 StaticDependenciesID=c1667511cc1f59088eb9d5a2f37bce9a 
+Importing 'GUID: 9f12d299d16099343a3c5c0d7285822a - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Controller_White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 9f12d299d16099343a3c5c0d7285822a' -> (Import Result ID: 'c53c4316b8646da9920e71381419d8da') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=baaee362ccd0ecb3270b2a5853584921 DependenciesID=8f30d9953ad6ec6e23d194515154a4de StaticDependenciesID=59239fa3bef63baa0c3807af12101266 
+Importing 'GUID: bf535219ddb55fa47aa1a3361c3225c0 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: bf535219ddb55fa47aa1a3361c3225c0' -> (Import Result ID: '52f53323249564f4fe5a2faae0f48d51') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0f5829a5c8ca5210ae875d276df03ecd DependenciesID=2d5e834690f2e77dea95166efcd1b739 StaticDependenciesID=b77da359e8182464bab8b0385fc48808 
+Asset Pipeline Refresh (id=acba150af7ef64a50a0a0c312d95aecf): Total: 0.066 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 40808a1b89c64184e9466aaec1fd1ac1 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ChessPiece.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 40808a1b89c64184e9466aaec1fd1ac1' -> (Import Result ID: '8bd689950a8aa5e4e8d475555de0da2e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f0a736a19747b1f211d02b20a4744ada DependenciesID=6a2e5f16478604eb1071ba0c9491cf79 StaticDependenciesID=fa3b876dff7d213e25d9a83fe0e617ad 
+Importing 'GUID: 029f8a55031eba342849aa7cc9616f2c - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/TeleportReticle.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 029f8a55031eba342849aa7cc9616f2c' -> (Import Result ID: '5765fe34b7c6d677bff9a6145d076398') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=30fc5e07b2f0aecf4a219df49ccfb6b7 DependenciesID=d5b80c218ab0d7068d76f63b7644a785 StaticDependenciesID=7255d2faf5780756c076e84947fdfbba 
+Importing 'GUID: 53c16fb5d5c516b40a1f6a8fc34132f3 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/AccentButton.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 53c16fb5d5c516b40a1f6a8fc34132f3' -> (Import Result ID: '78e9fbf3e0d1eff694278402615acdd2') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=723bfe7e71e70a32c447b5035225a853 DependenciesID=5b1a2d8abb78152b1115758947f66e7c StaticDependenciesID=f3bca7781032f30aabb0a54f4e29e08b 
+Importing 'GUID: 73b0a23f47c95b644820e018a0ab4ea6 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentTan.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 73b0a23f47c95b644820e018a0ab4ea6' -> (Import Result ID: 'c4c7da0583c90813f153ab90ca68853a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0be17c304bab9cd7cec6606dee5f1fb3 DependenciesID=ca43c2c26405df5c0981450467635657 StaticDependenciesID=f93152653863960be57ddb810c36a08b 
+Importing 'GUID: 830d28b607e09a2479e2005c2eb5c75e - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Concrete Light Blue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 830d28b607e09a2479e2005c2eb5c75e' -> (Import Result ID: '58bcd9331284355e63304b74fcc952c1') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b6b4fd25693bb5202068c021b7d38fa6 DependenciesID=51157ca127b35a457d70800960b95ff7 StaticDependenciesID=76f4f77c94b3e87d43b117c83cda4568 
+Importing 'GUID: b3c19a119577be64885886bfcc8792fe - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Interactable White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b3c19a119577be64885886bfcc8792fe' -> (Import Result ID: '6bf0a77034fe65607175707309f61bd3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=16bb02310fe12c390ab151e01d52fd30 DependenciesID=3d05bc5258871483c3531ea682122387 StaticDependenciesID=c35bf98f38363221f80aa6679727bdc7 
+Importing 'GUID: 54f7c59213ac02b4d9f00104348dbac3 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/FrameOutline.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 54f7c59213ac02b4d9f00104348dbac3' -> (Import Result ID: 'd109e85669322eea46af1bc233b67632') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=218915f3c40a01794b6145032fab2820 DependenciesID=a14981c67fc107c0cd1495377295b9bd StaticDependenciesID=bedaa583d6a4ce08dea9e6f406e953a7 
+Importing 'GUID: 842f1b88643f1bb458ba6243088e344e - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Concrete Grey.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 842f1b88643f1bb458ba6243088e344e' -> (Import Result ID: '811ada871eb1130e28e8fd5c729b1d9f') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=36bad2d78c448e84d1b557997bf31033 DependenciesID=4a123ad43600196cc828b03fd2781457 StaticDependenciesID=f3e99b795c47b6cdd29d78cd1a94bebc 
+Importing 'GUID: f5ccd52dc494e054fbe7d7161dcabe25 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/FresnelHighlight.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f5ccd52dc494e054fbe7d7161dcabe25' -> (Import Result ID: '1b1373f971aeb0e27e6c26ce49a0920a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=d065204da63698be0a3158ecfb511429 DependenciesID=b688067780009f41c1e7e6605e2dbe86 StaticDependenciesID=9fc6a78626030399c20c63046164c4df 
+Importing 'GUID: 76618f7490c40334fa7b685859587d2e - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Interactable.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 76618f7490c40334fa7b685859587d2e' -> (Import Result ID: '94775c6991b3205fa730b1c5b7d0340e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=78a1b1f8bf4788e126fad7122b5adafa DependenciesID=2792fadada79e6133f7a332336300971 StaticDependenciesID=65d4bb7a4f3172b5f91d52002c43cc1d 
+Importing 'GUID: f8b02ef1d22712f4db0746111a3d686b - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner3.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f8b02ef1d22712f4db0746111a3d686b' -> (Import Result ID: '3abab453d31a7dad012009b55f991802') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=64785a6681017c0a56de50d2a127fd42 DependenciesID=6951e8f40b5d299f845f8d1a7e65e21c StaticDependenciesID=4f3720d5af9478497a23ebc2f1e7f97e 
+Importing 'GUID: 19360606bcfcbeb429c461ec10c6ab40 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentBlueTransparent75.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 19360606bcfcbeb429c461ec10c6ab40' -> (Import Result ID: '9af1549fb055286c732c028ff83eb391') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b3e1c59644400a81a6304420461a7e1a DependenciesID=43497a63601acd9041e9f7fa413fc338 StaticDependenciesID=18c215306bc3d7b7c88676505b5d0069 
+Importing 'GUID: 99685157b02e4d446bbecb015645e5e8 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Controller_Grey.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 99685157b02e4d446bbecb015645e5e8' -> (Import Result ID: '7f2b4e62563502e52c13c40fee24e992') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=cda74d7e6d6aa443dca8dd5de15512e1 DependenciesID=1556109d3eaa20abb60f48befad97018 StaticDependenciesID=ac24617bd6b8813166352ae939bae86f 
+Importing 'GUID: c91596000a6cc4b4996417901edef94c - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ShadowCircular.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c91596000a6cc4b4996417901edef94c' -> (Import Result ID: '7fad2cf04c85d980436da6ccce22150b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=639247d79bd3bacf3449419447f852a2 DependenciesID=e3384e5ae501560bc08cbf4c213a0cbe StaticDependenciesID=50dfed36f980b36e7341e3a2b47b6e98 
+Importing 'GUID: f95c205049f12cc4cb5bd57dbded286c - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Controls_Black.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f95c205049f12cc4cb5bd57dbded286c' -> (Import Result ID: '8032a336f572cad4002abe6b183c7d0e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=5fd615560243cbee3d9afeb54bfdbab8 DependenciesID=9b485555b4845d5d493d6ed779753ae8 StaticDependenciesID=b97dd4319a4145f82a9670b0e4aa5b1f 
+Importing 'GUID: 0b3e50cff38c81e4e89e8bda80582c94 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner2.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0b3e50cff38c81e4e89e8bda80582c94' -> (Import Result ID: '2a5dd9645f28331d40f99b13d8be7f69') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3b9c4b07bcd92387959fd919d2debed9 DependenciesID=7480af3e56edf2480eead40e1c6f433e StaticDependenciesID=6ef7ca27242b60299031b523587d9692 
+Importing 'GUID: 5b0e69288f45e7943add774eaf2572fe - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Teleport Anchor Blue Glow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 5b0e69288f45e7943add774eaf2572fe' -> (Import Result ID: '6916643fed0b64c6f254f8d845c02016') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=35dc1311f4e93170e9744d0a3a1a6d53 DependenciesID=e16f445a2e5673212bd98e67357b2226 StaticDependenciesID=6db1806b33d65623485a19334fe92a5d 
+Importing 'GUID: bbb56ac3cf3c61a46ab3887c0fdbda8f - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Concrete Dark Blue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: bbb56ac3cf3c61a46ab3887c0fdbda8f' -> (Import Result ID: '8813d70a8995cf7aa3355b6b8f4abab4') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=38590e63d38dd650cf09a7a08a48fb5b DependenciesID=5b1cf1d7f9d90beea7f4709bb54b7f20 StaticDependenciesID=8e24959154e5d94eeaaef2a968fa7c2c 
+Importing 'GUID: cb11ed65c00b03b42be1911bd4d439f8 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentParticles.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cb11ed65c00b03b42be1911bd4d439f8' -> (Import Result ID: '65c8b839a15d59d944da22d55242f113') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f96f4c4d194c14ce753ad08ff4e7be89 DependenciesID=0462aa352f405cb0093d033554dd7ff6 StaticDependenciesID=791c7f15ccbcc43e3191036150f78cae 
+Importing 'GUID: 2cf0bcfa476070542a4c90468fc32181 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentLightBlue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2cf0bcfa476070542a4c90468fc32181' -> (Import Result ID: '9df17080ca0e80401094a1a5dcc767d3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=cf9b830e72a87594bb82beb7af991be3 DependenciesID=9716e5aab113e27ab2fb01200a41f0e9 StaticDependenciesID=1335d0140ae65c2f3ff77bc424210bf0 
+Importing 'GUID: 3ce47e4e69bf19e49a7d0513149e8f37 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Teleport Anchor Base.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3ce47e4e69bf19e49a7d0513149e8f37' -> (Import Result ID: 'afdfff2e7674719c49d3877a0920eba8') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f860d0e05ebb19c2605aa8c13f8e5034 DependenciesID=52e3d8ae2dd16c52ee32254351612aeb StaticDependenciesID=6666844f24692db4934a9eba7bc5833e 
+Importing 'GUID: 5c49e6dfb27f23c419a41f72612a38ae - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereShadowCaster.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 5c49e6dfb27f23c419a41f72612a38ae' -> (Import Result ID: 'b52fbebf8004885dc278af6922baf2fc') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=9f82ced58759c3627b134080d0fc304d DependenciesID=4b1cb2ec469c24b0e050a9f6ff493066 StaticDependenciesID=8c9bbd47239e821ca8982ae3a857acf2 
+Importing 'GUID: 6c72d2d2ead00e54db4b71b27ffb03d4 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Table Surface.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6c72d2d2ead00e54db4b71b27ffb03d4' -> (Import Result ID: '788270f9e6c42bf8ffe0a95f68f1b5db') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=60ce9e97b6510bd827162050d75b5084 DependenciesID=6301e50fa85c0b8cab1c74016f36f7a5 StaticDependenciesID=7ad3cda3688bf6491eaf0a801878e95c 
+Importing 'GUID: 8cd43e2243b7d0040858c9be02500050 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/UnityLogo.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 8cd43e2243b7d0040858c9be02500050' -> (Import Result ID: '204136c727f1df99c8102fd9b3698ee1') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f7bd0f0a8f43440733106b96c004005e DependenciesID=4083f3a88f5f1faeb6c04dfbf68025ff StaticDependenciesID=fb7fd468007e2232e672649233a9de30 
+Importing 'GUID: fc226930e8fad4c499969204cecfbc05 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Materials/Lit White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fc226930e8fad4c499969204cecfbc05' -> (Import Result ID: '31161b8527fd2a1a15200dda145240c2') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=21f55f6305684dc1d26bc41a400717a5 DependenciesID=3b630e9bc57a18237f44ead1d8614b2c StaticDependenciesID=7011c23f931259536372693b978de077 
+Importing 'GUID: 3d0dbe0d83151dc4c94881a85ab2ef2b - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner4.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3d0dbe0d83151dc4c94881a85ab2ef2b' -> (Import Result ID: '71b7eb0052ae03a399489a485b75e7b3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b9cf6b293dea9a0d887c0a8ae9f11081 DependenciesID=772e1a2f456e8dade58fce6915365822 StaticDependenciesID=75250d545e1508ebbfa3f4c4f87fb914 
+Importing 'GUID: 9d73f41c7719ba2449097a8c12e0a3aa - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/BrushedMetal.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 9d73f41c7719ba2449097a8c12e0a3aa' -> (Import Result ID: '204eae080a0c9d116438b2b603786426') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b761343a2d9813a3284960f30e10e54a DependenciesID=ab53b3a6397dbac3eb26bab72fc74ccf StaticDependenciesID=4f1b221e8f9a2775747f69034db99d7d 
+Importing 'GUID: fd3c5d8fce991e04f9c11109dde95b3b - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Telport Anchor.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fd3c5d8fce991e04f9c11109dde95b3b' -> (Import Result ID: 'c247067b86cad138eca20c110408a80b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=75d988857236db49ac70defbac59339b DependenciesID=9c3ad132dc57748a34de5bc1e070bdd3 StaticDependenciesID=86f6d8a9376d6a52aba427516fa48cdf 
+Importing 'GUID: 2edb876ca20f6ea40b4ebb61f96f1df1 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Chrome.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2edb876ca20f6ea40b4ebb61f96f1df1' -> (Import Result ID: 'ffbcae0abd69ded9b40545a0bc57cfa4') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7ef86df8e6aebdaddf1b90bcfbde9be2 DependenciesID=4b772c6175c87e71e9021cbe62069159 StaticDependenciesID=c80eb076db77344fcfcd2466b434b822 
+Importing 'GUID: 6e402270f1d9478429bd2ae7ce7eca67 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/Blue Anchor Arrow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6e402270f1d9478429bd2ae7ce7eca67' -> (Import Result ID: 'fa30def46635e6f8e64279ad5e662555') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=84ce7d04b787bafcbe2417db40bce699 DependenciesID=e1be52ceaf93f1248e77df9c7da1de60 StaticDependenciesID=f6aa98b5bb340282c45c939a109afc76 
+Importing 'GUID: 6e7895a83b46e8c43a748c6465dfa4a4 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentBlueTransparent50.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6e7895a83b46e8c43a748c6465dfa4a4' -> (Import Result ID: '0eca1dd679d225dac0d55426c6b94b35') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=97d2bd375e59a096caf9151b13a3a9cc DependenciesID=5730831c0e22dca4993e0b279666dc02 StaticDependenciesID=e193cd75719702a14c868436dba10337 
+Importing 'GUID: be3c68e7d11b1644d8a735236c8fd4ee - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/TeleportAnchor.mat' with importer (NativeFormatImporter)
+Imported 'GUID: be3c68e7d11b1644d8a735236c8fd4ee' -> (Import Result ID: 'ea2a7503978df21f32bcd989877d1642') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=a75812e23600e2637c7cb8c0a37d5ef9 DependenciesID=07248cf1e8227d721b14f0c0e910297a StaticDependenciesID=ecd017afeb7a5db1508724e23b343a40 
+Importing 'GUID: be1e10ce8a6f8cc4fb08d11c7f722469 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Telport Area.mat' with importer (NativeFormatImporter)
+Imported 'GUID: be1e10ce8a6f8cc4fb08d11c7f722469' -> (Import Result ID: '8b1dcab3bf7ee197e2f3830ba3978ad7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0ecc2259ba2aadc583592709e759dea5 DependenciesID=4a310ece4f52b06a184ae7547329ae2b StaticDependenciesID=b69da4b4329cb8b6b70d318464031ff8 
+Importing 'GUID: 6fe37c045403f7d419765f4a583c21c7 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/EnvironmentBlue.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6fe37c045403f7d419765f4a583c21c7' -> (Import Result ID: 'b2cac7bfda6b4b7e88a423941c531a92') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ce0f87632899377cd0d44de2451f3416 DependenciesID=945525e0dece999bf1759a01a1590f56 StaticDependenciesID=1369b2b336960272d24ecabcef440803 
+Importing 'GUID: 9f12d299d16099343a3c5c0d7285822a - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/Materials/Controller_White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 9f12d299d16099343a3c5c0d7285822a' -> (Import Result ID: '4fa7bb5e9893c3bb0685999e5ac8d238') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=baaee362ccd0ecb3270b2a5853584921 DependenciesID=c3c6e575dc280488cd344de14af2ef8e StaticDependenciesID=c62348b4e48f80b1725d2420dd940a5c 
+Importing 'GUID: bf535219ddb55fa47aa1a3361c3225c0 - Path: Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/DemoAssets/Materials/ArtSphereTransparentInner1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: bf535219ddb55fa47aa1a3361c3225c0' -> (Import Result ID: '8defe6c64a48099e1d881d024f8e1ed5') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0f5829a5c8ca5210ae875d276df03ecd DependenciesID=6fc856c35356d6fbed028602ac92b948 StaticDependenciesID=feb6d733dd6b543cbad7db0bb5e94b41 
+Asset Pipeline Refresh (id=c3fb8a0b0777c49f2abe30239907f754): Total: 0.062 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+2026-11-01 20:42:26.042 Unity[68251:4629288] CAMetalLayer ignoring invalid setDrawableSize width=0.000000 height=0.000000
+2026-11-01 20:42:26.058 Unity[68251:4629288] CAMetalLayer ignoring invalid setDrawableSize width=0.000000 height=0.000000
+PASS manager up at MenuStart
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:62)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+FAIL rig has a poke interactor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:74)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+PASS fingertips on rig (4)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:76)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+PASS START poke -> step 1 (Step1_PlaceVinyl)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:82)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+PASS vinyl drop -> step 2 (Step2_DropNeedle)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:91)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+PASS vinyl on SnapPoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:92)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+PASS platter spinning
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:94)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+FAIL tonearm -> step 3 (Step2_DropNeedle)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:112)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+FAIL drum loop playing after needle drop (vol 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+FAIL crackle playing
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+FAIL pad poke -> step 4 (Step2_DropNeedle)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SimulatedPlaythrough:Check (bool,string) (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:24)
+SimulatedPlaythrough/<Start>d__7:MoveNext () (at Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: Assets/Scripts/Chillhop/Dev/SimulatedPlaythrough.cs Line: 24)
+
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      ALC ILPP context 1 is unloading
