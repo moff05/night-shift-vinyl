@@ -45,6 +45,7 @@ public static class ChillhopBuilder
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
         RenderSettings.ambientLight = new Color(0.30f, 0.23f, 0.18f);
         RenderSettings.fog = false;
+        ChillhopDecor.Environment();
 
         GameObject rig = BuildRig();
         BuildRoom();
@@ -56,6 +57,7 @@ public static class ChillhopBuilder
         var mgr = BuildManager(audio, ui, lights);
 
         Wire(mgr, audio, snapZone, spinner, tonearm, pad, knob, fader, startBtn, restartBtn);
+        ChillhopDecor.Apply();
 
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene, ScenePath);
@@ -224,14 +226,6 @@ public static class ChillhopBuilder
         Prim(PrimitiveType.Cube, "DeskBody", desk, new Vector3(0, 0.45f, 0), new Vector3(1.9f, 0.9f, 0.8f), dark, true);
         Prim(PrimitiveType.Cube, "DeskTop", desk, new Vector3(0, 0.925f, 0), new Vector3(2.0f, 0.05f, 0.9f), wood, true);
 
-        // Shelf of records on the back wall for atmosphere.
-        Material crate = Mat("CrateWood", new Color(0.30f, 0.18f, 0.10f), 0f, 0.4f);
-        Prim(PrimitiveType.Cube, "Shelf", room, new Vector3(0, 1.3f, 2.9f), new Vector3(2.4f, 0.05f, 0.3f), crate, false);
-        for (int i = 0; i < 14; i++)
-        {
-            Color c = Color.HSVToRGB((i * 0.13f) % 1f, 0.45f, 0.55f);
-            Prim(PrimitiveType.Cube, "Sleeve" + i, room, new Vector3(-1.05f + i * 0.16f, 1.52f, 2.9f), new Vector3(0.14f, 0.34f, 0.025f), Mat("Sleeve" + (i % 6), c, 0f, 0.2f), false);
-        }
     }
 
     class LightRefs
@@ -245,7 +239,7 @@ public static class ChillhopBuilder
         var refs = new LightRefs();
         var root = Empty("Lighting", null, Vector3.zero).transform;
 
-        var lampObj = Empty("DeskLamp", root, new Vector3(-0.85f, 1.45f, 0.55f));
+        var lampObj = Empty("DeskLampLight", root, new Vector3(-0.98f, 1.45f, 0.30f));
         lampObj.transform.rotation = Quaternion.LookRotation(new Vector3(0.45f, 1.0f, 0.65f) - lampObj.transform.position);
         var lamp = lampObj.AddComponent<Light>();
         lamp.type = LightType.Spot;
@@ -259,7 +253,7 @@ public static class ChillhopBuilder
         // Lamp visual
         Material brass = Mat("Brass", new Color(0.7f, 0.5f, 0.2f), 0.8f, 0.5f);
         Material bulb = Mat("Bulb", new Color(1f, 0.8f, 0.5f), 0f, 0.5f, new Color(3f, 1.8f, 0.7f));
-        var lampVis = Empty("LampVisual", root, new Vector3(-0.85f, 0.95f, 0.55f)).transform;
+        var lampVis = Empty("LampVisual", root, new Vector3(-0.98f, 0.95f, 0.30f)).transform;
         Prim(PrimitiveType.Cylinder, "Base", lampVis, new Vector3(0, 0.01f, 0), new Vector3(0.14f, 0.01f, 0.14f), brass);
         Prim(PrimitiveType.Cylinder, "Stem", lampVis, new Vector3(0, 0.25f, 0), new Vector3(0.015f, 0.25f, 0.015f), brass);
         Prim(PrimitiveType.Sphere, "Bulb", lampVis, new Vector3(0, 0.5f, 0), new Vector3(0.11f, 0.11f, 0.11f), bulb);
@@ -424,7 +418,7 @@ public static class ChillhopBuilder
         SetEnum(pad, "requiredStep", (int)SimStep.Step3_TriggerSamplePad);
         SetRef(pad, "flashRenderer", cap.GetComponent<Renderer>());
         SetColor(pad, "idleGlow", new Color(0.35f, 0.14f, 0f));
-        SetColor(pad, "flashGlow", new Color(10f, 4.2f, 0f));
+        SetColor(pad, "flashGlow", new Color(1.5f, 0.6f, 0f));
         SetRef(pad, "pressClip", AssetDatabase.LoadAssetAtPath<AudioClip>(AudioDir + "pad_hit.wav"));
 
         // Filter knob
@@ -594,7 +588,7 @@ public static class ChillhopBuilder
         tg.transform.localScale = new Vector3(1f / 0.24f * 0.001f, 1f / 0.10f * 0.001f, 1f / 0.024f * 0.001f);
         var c = tg.GetComponent<Canvas>();
         c.renderMode = RenderMode.WorldSpace;
-        ((RectTransform)tg.transform).sizeDelta = new Vector2(230, 90);
+        ((RectTransform)tg.transform).sizeDelta = new Vector2(200, 90);
         var txt = MakeText("Text", tg.transform, label, 40, new Color(0.1f, 0.05f, 0f), Vector2.zero, Vector2.one, TextAlignmentOptions.Center, FontStyles.Bold);
         ((RectTransform)txt.transform).offsetMin = ((RectTransform)txt.transform).offsetMax = Vector2.zero;
         txt.textWrappingMode = TextWrappingModes.NoWrap;
@@ -611,7 +605,7 @@ public static class ChillhopBuilder
         SetEnum(btn, "requiredStep", (int)step);
         SetRef(btn, "flashRenderer", cap.GetComponent<Renderer>());
         SetColor(btn, "idleGlow", color * 0.5f);
-        SetColor(btn, "flashGlow", color * 4f);
+        SetColor(btn, "flashGlow", color * 2.2f);
         SetRef(btn, "pressClip", AssetDatabase.LoadAssetAtPath<AudioClip>(AudioDir + "button_click.wav"));
         return btn;
     }
