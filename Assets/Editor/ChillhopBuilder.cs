@@ -13,7 +13,7 @@ using UnityEngine.XR.OpenXR;
 using UnityEngine.XR.OpenXR.Features;
 using UnityEngine.Events;
 
-/// <summary>Builds the whole Chillhop Crate scene from code. Run via Chillhop/Build Scene.</summary>
+/// <summary>Builds the whole Night Shift Vinyl scene from code. Run via Chillhop/Build Scene.</summary>
 public static class ChillhopBuilder
 {
     const string ScenePath = "Assets/Scenes/ChillhopCrate.unity";
@@ -105,9 +105,9 @@ public static class ChillhopBuilder
 
     static void ConfigurePlayer()
     {
-        PlayerSettings.productName = "The Chillhop Crate";
+        PlayerSettings.productName = "Night Shift Vinyl";
         PlayerSettings.companyName = "nmoffett";
-        PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Android, "com.nmoffett.chillhopcrate");
+        PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Android, "com.nmoffett.nightshiftvinyl");
         PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
         PlayerSettings.bundleVersion = "1.0.0";
@@ -620,8 +620,8 @@ public static class ChillhopBuilder
 
         // Intro
         ui.intro = MakePanel("IntroPanel", new Vector3(0, 1.62f, 0.85f), new Vector2(800, 450), bg, out c);
-        MakeText("Title", c, "CHILLHOP LOUNGE", 64, amber, new Vector2(0, 0.62f), new Vector2(1, 1), TextAlignmentOptions.Center, FontStyles.Bold);
-        MakeText("Body", c, "Welcome to Chillhop Lounge.\nStep behind the deck and complete your audio session.", 40, cream, new Vector2(0, 0.08f), new Vector2(1, 0.64f), TextAlignmentOptions.Center);
+        MakeText("Title", c, "NIGHT SHIFT VINYL", 56, amber, new Vector2(0, 0.62f), new Vector2(1, 1), TextAlignmentOptions.Center, FontStyles.Bold);
+        MakeText("Body", c, "Welcome to Night Shift Vinyl.\nStep behind the deck and complete your audio session.", 40, cream, new Vector2(0, 0.08f), new Vector2(1, 0.64f), TextAlignmentOptions.Center);
         MakeText("Hint", c, "Poke START SESSION to begin", 30, amber * 0.85f, new Vector2(0, 0), new Vector2(1, 0.16f), TextAlignmentOptions.Center, FontStyles.Italic);
         startBtn = MakeBigButton("StartButton", new Vector3(0, 1.30f, 0.55f), "START SESSION", new Color(0.30f, 0.80f, 0.55f), SimStep.MenuStart);
         startBtn.transform.SetParent(ui.intro.transform, true);
@@ -710,7 +710,7 @@ public static class ChillhopBuilder
         var opts = new BuildPlayerOptions
         {
             scenes = new[] { ScenePath },
-            locationPathName = "Builds/chillhopcrate.apk",
+            locationPathName = "Builds/nightshiftvinyl.apk",
             target = BuildTarget.Android,
             options = BuildOptions.None
         };

@@ -4,7 +4,7 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 
-/// <summary>The ordered stages of the Chillhop Crate session.</summary>
+/// <summary>The ordered stages of the Night Shift Vinyl session.</summary>
 public enum SimStep
 {
     MenuStart,
