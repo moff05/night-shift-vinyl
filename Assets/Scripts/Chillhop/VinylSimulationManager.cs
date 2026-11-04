@@ -55,6 +55,16 @@ public class VinylSimulationManager : MonoBehaviour
         "Open Low-Pass Filter",
         "Push Master Output Fader"
     };
+    [Tooltip("One short how-to line shown under the current step (index = step number - 1).")]
+    [SerializeField]
+    string[] stepHints =
+    {
+        "Pinch the record, drop it on the platter",
+        "Pinch the arm handle, swing it over",
+        "POKE the orange pad with one finger",
+        "Pinch the knob, twist it clockwise",
+        "Pinch the fader, slide it to the right"
+    };
     [SerializeField] Color currentStepColor = new Color(1f, 0.69f, 0.2f);
 
     [Header("Audio")]
@@ -230,6 +240,8 @@ public class VinylSimulationManager : MonoBehaviour
             {
                 sb.Append("<color=#").Append(ColorUtility.ToHtmlStringRGB(currentStepColor)).Append(">[ ] ");
                 sb.Append(stepNumber).Append(". ").Append(stepLabels[i]).Append("</color>");
+                if (stepHints != null && i < stepHints.Length && !string.IsNullOrEmpty(stepHints[i]))
+                    sb.Append("\n<size=70%><i>     ").Append(stepHints[i]).Append("</i></size>");
             }
             else
             {

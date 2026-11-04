@@ -192,7 +192,7 @@ public class SimulatedPlaythrough : MonoBehaviour
         SetField(fader, "attach", attach);
         typeof(VRFaderKnob).GetMethod("BeginDrag", BF).Invoke(fader, null);
         Vector3 f0 = fader.transform.position;
-        for (int i = 1; i <= 20; i++) { attach.position = f0 + Vector3.up * (i * 0.01f); yield return null; }
+        for (int i = 1; i <= 20; i++) { attach.position = f0 + fader.transform.parent.TransformDirection(Vector3.right) * (i * 0.01f); yield return null; }
         yield return new WaitForSeconds(1.5f);
         Check(mgr.CurrentStep == SimStep.Complete, "fader -> Complete (" + mgr.CurrentStep + ")");
         Check(Mathf.Abs(AudioListener.volume - 1f) < 0.02f, "master at 1.0 (" + AudioListener.volume + ")");

@@ -88,11 +88,11 @@ def build_mixer():
     for x in (-0.1, 0.1):
         A.box((0.07, 0.0015, 0.006), (x, 0.0625, -0.2), "M_Label")
     A.box((0.15, 0.0015, 0.006), (0, 0.0625, -0.03 + 0.0), "M_Label")
-    # fader back panel + struts (bottom of panel at local y 0.06, centre z 0.212)
-    A.box((0.15, 0.26, 0.012), (0, 0.06 + 0.13, 0.212), "M_MixerBody", bevel=0.004, seg=2)
-    A.box((0.135, 0.245, 0.004), (0, 0.06 + 0.13, 0.2035), "M_MixerTop", bevel=0.0008, seg=1)
-    for sx in (-1, 1):
-        A.box((0.012, 0.14, 0.05), (sx * 0.068, 0.12, 0.185), "M_MixerBody", rot=(-20, 0, 0), bevel=0.003)
+    # flat DJ-style fader channel on the board (cap, slot and ticks are added in Unity); plate centred at z 0.15
+    A.box((0.30, 0.003, 0.085), (0, 0.0625, 0.15), "M_Black", bevel=0.001, seg=1)
+    A.box((0.25, 0.0012, 0.016), (0, 0.0642, 0.15), "M_MixerBody", bevel=0.0005, seg=1)
+    for x in (-0.145, 0.145):
+        A.box((0.004, 0.0015, 0.07), (x, 0.0642, 0.15), "M_Label")
     return A
 
 def build_crate():

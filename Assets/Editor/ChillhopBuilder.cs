@@ -122,6 +122,25 @@ public static class ChillhopBuilder
         rig.name = "XR Origin Hands (XR Rig)";
         rig.transform.position = Vector3.zero;
 
+        // The hand interactors read pinch/select from the XRI Default Input Actions; nothing enables them unless an
+        // InputActionManager does (the sample scenes include one, the rig prefab does not).
+        var actionsAsset = AssetDatabase.LoadAssetAtPath<UnityEngine.InputSystem.InputActionAsset>(
+            "Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/XRI Default Input Actions.inputactions");
+        var iamGo = new GameObject("Input Action Manager");
+        var iam = iamGo.AddComponent<UnityEngine.XR.Interaction.Toolkit.Inputs.InputActionManager>();
+        iam.actionAssets = new List<UnityEngine.InputSystem.InputActionAsset> { actionsAsset };
+
+        // Optical tracking rarely reports a perfect 1.0 pinch, and the sample demands one (press 1.0 / release 0.9).
+        // A pinch now registers at 80% and holds until it relaxes below 60%.
+        foreach (MonoBehaviour mb in rig.GetComponentsInChildren<MonoBehaviour>(true))
+        {
+            if (mb != null && mb.GetType().Name == "ReleaseThresholdButtonReader")
+            {
+                Set(mb, "m_PressThreshold", 0.8f);
+                Set(mb, "m_ReleaseThreshold", 0.6f);
+            }
+        }
+
         DumpHierarchy(rig.transform, "");
 
         // Stationary scene: strip locomotion and teleport.
@@ -327,6 +346,11 @@ public static class ChillhopBuilder
         vinyl.transform.position = new Vector3(0.78f, 1.05f + 0.008f, 0.62f);
         var col = vinyl.AddComponent<BoxCollider>();
         col.size = new Vector3(0.30f, 0.012f, 0.30f);
+        var pinchZone = new GameObject("PinchZone");     // thick trigger so a pinch near the record counts
+        pinchZone.transform.SetParent(vinyl.transform, false);
+        var pz = pinchZone.AddComponent<BoxCollider>();
+        pz.isTrigger = true;
+        pz.size = new Vector3(0.32f, 0.08f, 0.32f);
         var rb = vinyl.AddComponent<Rigidbody>();
         rb.mass = 0.2f;
         rb.linearDamping = 1f;
@@ -369,7 +393,7 @@ public static class ChillhopBuilder
 
         var handle = Empty("Handle", pivot.transform, new Vector3(0, 0.025f, ArmLength * 0.78f));
         var hc = handle.AddComponent<SphereCollider>();
-        hc.radius = 0.035f;
+        hc.radius = 0.07f;          // generous: a pinch only has to land near the knob
         var hrb = handle.AddComponent<Rigidbody>();
         hrb.isKinematic = true;
         hrb.useGravity = false;
@@ -424,8 +448,8 @@ public static class ChillhopBuilder
         // Filter knob
         var knobObj = Empty("FilterKnob", mixer, new Vector3(0.1f, top + 0.03f, -0.12f));
         var kc = knobObj.AddComponent<CapsuleCollider>();
-        kc.radius = 0.055f;
-        kc.height = 0.08f;
+        kc.radius = 0.075f;
+        kc.height = 0.12f;
         var krb = knobObj.AddComponent<Rigidbody>();
         krb.isKinematic = true;
         krb.useGravity = false;
@@ -445,24 +469,24 @@ public static class ChillhopBuilder
         SetEnum(knob, "output", (int)VRFaderKnob.OutputTarget.FilterCutoff);
         SetEnum(knob, "requiredStep", (int)SimStep.Step4_FilterKnob);
 
-        // Master fader: vertical panel at the back of the mixer
-        var panel = Empty("FaderTrack", mixer, new Vector3(0.0f, top + 0.0f, 0.2f));
-        Prim(PrimitiveType.Cube, "FaderBack", panel.transform, new Vector3(0, 0.12f, 0.012f), new Vector3(0.14f, 0.26f, 0.012f), body);
-        Prim(PrimitiveType.Cube, "FaderSlot", panel.transform, new Vector3(0, 0.12f, 0.004f), new Vector3(0.012f, 0.19f, 0.006f), track);
-        for (int i = 0; i <= 4; i++)
-            Prim(PrimitiveType.Cube, "FaderTick" + i, panel.transform, new Vector3(-0.04f, 0.04f + i * 0.04f, 0.004f), new Vector3(0.025f, 0.003f, 0.004f), white);
-        var fh = Empty("FaderHandle", panel.transform, new Vector3(0, 0.04f, -0.012f));
+        // Master fader: a flat DJ-style channel fader lying on the board, sliding left (quiet) to right (loud)
+        var panel = Empty("FaderTrack", mixer, new Vector3(0.0f, top + 0.004f, 0.15f));
+        Prim(PrimitiveType.Cube, "FaderSlot", panel.transform, new Vector3(0, 0, 0), new Vector3(0.23f, 0.002f, 0.009f), track);
+        for (int i = 0; i <= 8; i++)
+            Prim(PrimitiveType.Cube, "FaderTick" + i, panel.transform, new Vector3(-0.1f + i * 0.025f, -0.001f, -0.03f), new Vector3(0.002f, 0.0015f, i % 2 == 0 ? 0.016f : 0.009f), white);
+        var fh = Empty("FaderHandle", panel.transform, new Vector3(-0.1f, 0.009f, 0));
         var fc = fh.AddComponent<BoxCollider>();
-        fc.size = new Vector3(0.09f, 0.05f, 0.05f);
+        fc.size = new Vector3(0.09f, 0.08f, 0.11f);
         var frb = fh.AddComponent<Rigidbody>();
         frb.isKinematic = true;
         frb.useGravity = false;
         fh.AddComponent<XRSimpleInteractable>();
-        Prim(PrimitiveType.Cube, "FaderCapMesh", fh.transform, Vector3.zero, new Vector3(0.06f, 0.03f, 0.03f), fadeCap);
+        Prim(PrimitiveType.Cube, "FaderCapMesh", fh.transform, Vector3.zero, new Vector3(0.028f, 0.016f, 0.05f), fadeCap);
+        Prim(PrimitiveType.Cube, "FaderCapStripe", fh.transform, new Vector3(0, 0.0085f, 0), new Vector3(0.004f, 0.001f, 0.046f), Mat("Pointer", new Color(0.95f, 0.95f, 0.95f), 0f, 0.5f));
         fader = fh.AddComponent<VRFaderKnob>();
         SetEnum(fader, "mode", (int)VRFaderKnob.ControlMode.Slider);
-        SetVec3(fader, "axis", Vector3.up);
-        Set(fader, "sliderTravel", 0.16f);
+        SetVec3(fader, "axis", Vector3.right);
+        Set(fader, "sliderTravel", 0.2f);
         SetEnum(fader, "output", (int)VRFaderKnob.OutputTarget.MasterVolume);
         Set(fader, "volumeAtMin", 0.3f);
         Set(fader, "volumeAtMax", 1f);
@@ -621,8 +645,8 @@ public static class ChillhopBuilder
         // Intro
         ui.intro = MakePanel("IntroPanel", new Vector3(0, 1.62f, 0.85f), new Vector2(800, 450), bg, out c);
         MakeText("Title", c, "NIGHT SHIFT VINYL", 56, amber, new Vector2(0, 0.62f), new Vector2(1, 1), TextAlignmentOptions.Center, FontStyles.Bold);
-        MakeText("Body", c, "Welcome to Night Shift Vinyl.\nStep behind the deck and complete your audio session.", 40, cream, new Vector2(0, 0.08f), new Vector2(1, 0.64f), TextAlignmentOptions.Center);
-        MakeText("Hint", c, "Poke START SESSION to begin", 30, amber * 0.85f, new Vector2(0, 0), new Vector2(1, 0.16f), TextAlignmentOptions.Center, FontStyles.Italic);
+        MakeText("Body", c, "Welcome to Night Shift Vinyl.\nPOKE buttons with one fingertip.\nPINCH (thumb + index) to grab and turn.", 36, cream, new Vector2(0, 0.08f), new Vector2(1, 0.64f), TextAlignmentOptions.Center);
+        MakeText("Hint", c, "Poke START SESSION with one finger", 30, amber * 0.85f, new Vector2(0, 0), new Vector2(1, 0.16f), TextAlignmentOptions.Center, FontStyles.Italic);
         startBtn = MakeBigButton("StartButton", new Vector3(0, 1.30f, 0.55f), "START SESSION", new Color(0.30f, 0.80f, 0.55f), SimStep.MenuStart);
         startBtn.transform.SetParent(ui.intro.transform, true);
 
@@ -707,6 +731,8 @@ public static class ChillhopBuilder
     {
         Directory.CreateDirectory("Builds");
         EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
+        // Hand-tracking components live only in serialized prefabs; keep stripping minimal (see Assets/link.xml).
+        PlayerSettings.SetManagedStrippingLevel(UnityEditor.Build.NamedBuildTarget.Android, ManagedStrippingLevel.Minimal);
         var opts = new BuildPlayerOptions
         {
             scenes = new[] { ScenePath },

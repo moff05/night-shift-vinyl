@@ -1,0 +1,10 @@
+<linker>
+  <!-- Keep hand tracking components that are only referenced from serialized prefabs, so IL2CPP stripping cannot drop them on device. -->
+  <assembly fullname="Unity.XR.Hands" preserve="all"/>
+  <assembly fullname="Unity.XR.Hands.Samples.VisualizerSample" preserve="all"/>
+  <assembly fullname="Unity.XR.Interaction.Toolkit" preserve="all"/>
+  <assembly fullname="HandsInteractionDemo" preserve="all"/>
+  <assembly fullname="StarterAssets" preserve="all"/>
+  <assembly fullname="Unity.XR.OpenXR" preserve="all"/>
+  <assembly fullname="Unity.XR.MetaOpenXR" preserve="all"/>
+</linker>

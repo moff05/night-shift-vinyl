@@ -482,8 +482,10 @@ public static class ChillhopDecor
 
         // ---- furniture
         var couch = Place("Couch", new Vector3(-2.5f, 0f, 1.1f), -90f);
-        Vector3 seat = couch.transform.TransformPoint(new Vector3(-0.5f, 0.49f, -0.08f));
-        var cat = Place("Cat", seat, -70f, null, false);
+        // Centre cushion, curled along the seat between the two throw pillows (they sit at x -0.55 and +0.62), clear of the back cushions.
+        Vector3 seat = couch.transform.TransformPoint(new Vector3(0.04f, 0.492f, -0.14f));
+        var cat = Place("Cat", seat, 0f, null, false);
+        cat.transform.localScale = Vector3.one * 0.8f;
         var br = cat.AddComponent<Breathe>(); br.amount = 0.035f; br.rate = 1.7f;
         Place("SideTable", new Vector3(-2.55f, 0f, 2.42f));
         Place("Cactus", new Vector3(-2.55f, 0.535f, 2.42f), 30f);
@@ -571,6 +573,56 @@ public static class ChillhopDecor
             var cp = GameObject.Find("CompletePanel");
             if (cp != null) { var sd = mgr.gameObject.AddComponent<SlateDock>(); sd.slate = cp.transform; }
         }
+        Guides();
+    }
+
+    // ---- "touch this next" outline: a pulsing rim around whichever control the current step needs
+    static Material outlineMat;
+
+    static void Guides()
+    {
+        outlineMat = Unlit("Outline_Guide", null, Color.white, 0);
+        outlineMat.SetFloat("_Cull", 1f);                      // cull front faces: only the grown back shell shows, as a rim
+        EditorUtility.SetDirty(outlineMat);
+        Color amber = new Color(1f, 0.72f, 0.28f), green = new Color(0.35f, 1f, 0.6f), coral = new Color(1f, 0.5f, 0.4f), cyan = new Color(0.4f, 0.9f, 1f);
+        foreach (var b in Object.FindObjectsByType<VRPokeButton>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            if (b.name == "StartButton") Guide(b.transform, SimStep.MenuStart, green, 0.007f, "ButtonBase");
+            else if (b.name == "RestartButton") Guide(b.transform, SimStep.Complete, coral, 0.007f, "ButtonBase");
+            else if (b.name == "PadButton") Guide(b.transform, SimStep.Step3_TriggerSamplePad, amber, 0.005f, "PadCap");
+        }
+        var vinyl = Find("VinylRecord");
+        if (vinyl != null) Guide(vinyl.transform, SimStep.Step1_PlaceVinyl, amber, 0.006f, null);
+        var snap = Find("SnapPoint");
+        if (snap != null)
+        {
+            var g = Guide(snap.transform, SimStep.Step1_PlaceVinyl, cyan, 0.005f, "none");
+            g.ringRadius = 0.165f; g.ringWidth = 0.006f;
+        }
+        var pivot = Find("ArmPivot");
+        if (pivot != null && pivot.transform.Find("Handle") != null) Guide(pivot.transform.Find("Handle"), SimStep.Step2_DropNeedle, amber, 0.006f, "HandleKnob");
+        var knob = Find("FilterKnob");
+        if (knob != null) Guide(knob.transform, SimStep.Step4_FilterKnob, amber, 0.005f, "KnobBody");
+        var fader = Find("FaderHandle");
+        if (fader != null) Guide(fader.transform, SimStep.Step5_MasterFader, amber, 0.004f, "FaderCapMesh");
+    }
+
+    static StepGlow Guide(Transform target, SimStep step, Color color, float thickness, string childName)
+    {
+        var list = new System.Collections.Generic.List<Renderer>();
+        foreach (var r in target.GetComponentsInChildren<MeshRenderer>(true))
+        {
+            if (!r.enabled || r.GetComponent<MeshFilter>() == null) continue;
+            if (childName != null && r.name != childName) continue;
+            list.Add(r);
+        }
+        var g = target.gameObject.AddComponent<StepGlow>();
+        g.step = step;
+        g.sources = list.ToArray();
+        g.outlineMaterial = outlineMat;
+        g.thickness = thickness;
+        g.color = color;
+        return g;
     }
 
     static void BackBlocker(string name, float x, float w, float y, float h)
