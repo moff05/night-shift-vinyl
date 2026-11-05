@@ -184,6 +184,16 @@ public class VinylSimulationManager : MonoBehaviour
 
     // ---------------------------------------------------------------- reset
 
+    /// <summary>Wire to the EXIT GAME poke button. Closes the app back to Quest Home (hands-only players have no other way out).</summary>
+    public void QuitApp()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
     /// <summary>Wire to the RESTART SESSION poke button. Returns the whole scene to its first frame.</summary>
     public void ResetSimulation()
     {

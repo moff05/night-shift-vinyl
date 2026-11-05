@@ -18,7 +18,7 @@ public static class ChillhopBuilder
 {
     const string ScenePath = "Assets/Scenes/ChillhopCrate.unity";
     const string MatDir = "Assets/Materials/Chillhop";
-    static readonly Vector3 RigOffset = new Vector3(0.2f, 0f, 0.1f);
+    static readonly Vector3 RigOffset = new Vector3(0.2f, -0.25f, -0.05f);   // y<0 lowers eye level so you look across the desk, not down at it
     const float RigScale = 1.25f;      // scales the player up relative to the room: hands reach 25% further, the room reads a little smaller
     const string AudioDir = "Assets/Audio/Chillhop/";
     const string RigPrefab = "Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/Prefabs/XR Origin Hands (XR Rig).prefab";
@@ -57,10 +57,11 @@ public static class ChillhopBuilder
         var audio = BuildAudio(rig);
         var ui = BuildUi(out VRPokeButton startBtn, out VRPokeButton restartBtn);
         foreach (var panelRoot in new[] { ui.intro, ui.checklist, ui.complete })
-            if (panelRoot != null) panelRoot.transform.position += RigOffset + new Vector3(0f, 0.2f, 0.05f);   // panels were laid out for a head at the origin
+            if (panelRoot != null) panelRoot.transform.position += new Vector3(RigOffset.x, 0.08f, RigOffset.z + 0.05f);   // panels were laid out for a head at the origin
         var mgr = BuildManager(audio, ui, lights);
 
         Wire(mgr, audio, snapZone, spinner, tonearm, pad, knob, fader, startBtn, restartBtn);
+        if (ui.exit != null) UnityEventTools.AddVoidPersistentListener(ui.exit.onPressed, mgr.QuitApp);
         ChillhopDecor.Apply();
 
         EditorSceneManager.MarkSceneDirty(scene);
@@ -547,6 +548,7 @@ public static class ChillhopBuilder
     {
         public GameObject intro, checklist, complete;
         public TMP_Text checklistText, timeText;
+        public VRPokeButton exit;
     }
 
     static TMP_Text MakeText(string name, Transform parent, string text, float size, Color color, Vector2 anchorMin, Vector2 anchorMax, TextAlignmentOptions align, FontStyles style = FontStyles.Normal)
@@ -663,6 +665,11 @@ public static class ChillhopBuilder
         ui.checklistText = MakeText("Checklist", c, "", 34, cream, new Vector2(0, 0), new Vector2(1, 0.78f), TextAlignmentOptions.TopLeft);
         ui.checklistText.richText = true;
         ui.checklistText.lineSpacing = 25f;
+
+        // Always-available way out for hands-only play: poke EXIT GAME and the app closes back to Home.
+        ui.exit = MakeBigButton("ExitButton", new Vector3(-0.62f, 1.16f, 0.75f), "EXIT GAME", new Color(0.55f, 0.55f, 0.6f), SimStep.MenuStart);
+        SetBool(ui.exit, "gateByStep", false);
+        ui.exit.transform.SetParent(ui.checklist.transform, true);
 
         // Completion
         ui.complete = MakePanel("CompletePanel", new Vector3(0, 1.62f, 0.85f), new Vector2(800, 450), bg, out c);
