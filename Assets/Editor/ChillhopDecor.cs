@@ -666,7 +666,7 @@ public static class ChillhopDecor
             c.name = "VuBar" + i;
             Object.DestroyImmediate(c.GetComponent<Collider>());
             c.transform.SetParent(mixer, false);
-            c.transform.localPosition = new Vector3(-0.098f + i * 0.028f, 0.066f, 0.04f);
+            c.transform.localPosition = new Vector3(-0.098f + i * 0.028f, 0.066f, 0.15f);
             c.transform.localScale = new Vector3(0.018f, 0.004f, 0.034f);
             string mat = i < 5 ? "M_LEDGreen" : (i < 7 ? "M_LEDAmber" : "M_LEDRed");
             var r = c.GetComponent<Renderer>();

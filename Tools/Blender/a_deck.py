@@ -81,10 +81,10 @@ def build_mixer():
             A.cyl(0.015, 0.012, (sx * 0.21, 0.006, sz * 0.19), "M_Black", seg=10)
             A.cyl(0.005, 0.003, (sx * 0.222, 0.0635, sz * 0.205), "M_Steel", seg=6)             # screws
     # VU window frame (bars are added in Unity)
-    A.box((0.24, 0.003, 0.055), (0, 0.0635, 0.04), "M_Black", bevel=0.001)
+    A.box((0.24, 0.003, 0.055), (0, 0.0635, 0.15), "M_Black", bevel=0.001)
     # LEDs
     for i, m in enumerate(["M_LEDGreen", "M_LEDRed", "M_LEDGreen"]):
-        A.cyl(0.005, 0.004, (-0.19 + i * 0.02, 0.064, 0.0), m, seg=8)
+        A.cyl(0.005, 0.004, (-0.205 + i * 0.02, 0.064, 0.15), m, seg=8)
     # flat DJ-style fader channel on the board (cap, slot and ticks are added in Unity); plate centred at z 0.15
     A.box((0.30, 0.003, 0.085), (0, 0.0625, -0.185), "M_Black", bevel=0.001, seg=1)
     A.box((0.25, 0.0012, 0.016), (0, 0.0642, -0.185), "M_MixerBody", bevel=0.0005, seg=1)

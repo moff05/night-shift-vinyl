@@ -25,6 +25,10 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
     [Tooltip("Degrees of rotation from 0 to 1. Positive = clockwise looking down the axis.")]
     [SerializeField] float rotaryRange = 90f;
     [SerializeField] bool invertRotation;
+    [Tooltip("Rotary: either twist direction opens the dial (the pointer follows your hand); only the amount of turn counts.")]
+    [SerializeField] bool bothDirections = true;
+    [Tooltip("Rotary: virtual degrees turned per real degree of hand movement. >1 means a short twist is enough.")]
+    [SerializeField] float rotarySensitivity = 1.5f;
     [SerializeField, Range(0f, 1f)] float startValue;
 
     [Header("Output")]
@@ -36,7 +40,7 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
     [Header("Step gate")]
     [SerializeField] bool gateByStep = true;
     [SerializeField] SimStep requiredStep = SimStep.Step4_FilterKnob;
-    [SerializeField, Range(0.5f, 1f)] float completeThreshold = 0.97f;
+    [SerializeField, Range(0.5f, 1f)] float completeThreshold = 0.9f;
     [SerializeField] bool lockOnComplete = true;
 
     [Header("Events")]
@@ -54,6 +58,10 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
     Vector3 axisN;
     Vector3 prevDir;
     bool hasPrevDir;
+    Vector3 prevTwist;
+    bool hasPrevTwist;
+    float turn;                            // signed degrees turned so far (rotary); Value = |turn| / range
+
     float grabOffset;
     bool completed;
 
@@ -65,6 +73,7 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
         baseLocalPos = movingPart.localPosition;
         baseLocalRot = movingPart.localRotation;
         axisN = axis.sqrMagnitude > 0f ? axis.normalized : Vector3.up;
+        turn = startValue * rotaryRange;
         SetValueInternal(startValue, false);
     }
 
@@ -106,6 +115,7 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
         if (mode == ControlMode.Rotary)
         {
             hasPrevDir = VRDragMath.TryPlanarDirection(attach.position, movingPart.position, AxisWorld, out prevDir);
+            hasPrevTwist = VRDragMath.TryPlanarDirection(attach.position + attach.right, attach.position, AxisWorld, out prevTwist);
         }
         else
         {
@@ -148,11 +158,23 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
         }
 
         float sign = invertRotation ? -1f : 1f;
-        float delta = Vector3.SignedAngle(prevDir, dir, axisWorld) * sign;
+        float orbit = Vector3.SignedAngle(prevDir, dir, axisWorld) * sign;      // hand circling the dial
         prevDir = dir;
 
-        float angle = Mathf.Clamp(Value * rotaryRange + delta, 0f, rotaryRange);
-        SetValueInternal(rotaryRange > 0f ? angle / rotaryRange : 0f, true);
+        // wrist twist: how much the pinching hand itself rolled about the dial axis (the natural way to turn a knob)
+        float twist = 0f;
+        if (VRDragMath.TryPlanarDirection(attach.position + attach.right, attach.position, axisWorld, out Vector3 tw))
+        {
+            if (hasPrevTwist) twist = Vector3.SignedAngle(prevTwist, tw, axisWorld) * sign;
+            prevTwist = tw;
+            hasPrevTwist = true;
+        }
+        else hasPrevTwist = false;
+
+        float delta = (Mathf.Abs(twist) > Mathf.Abs(orbit) ? twist : orbit) * rotarySensitivity;
+        float limit = rotaryRange;
+        turn = Mathf.Clamp(turn + delta, bothDirections ? -limit : 0f, limit);
+        SetValueInternal(rotaryRange > 0f ? Mathf.Abs(turn) / rotaryRange : 0f, true);
     }
 
     void UpdateSlider()
@@ -169,7 +191,8 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
         if (mode == ControlMode.Rotary)
         {
             float sign = invertRotation ? -1f : 1f;
-            movingPart.localRotation = baseLocalRot * Quaternion.AngleAxis(sign * Value * rotaryRange, axisN);
+            float dirSign = turn < 0f ? -1f : 1f;
+            movingPart.localRotation = baseLocalRot * Quaternion.AngleAxis(sign * dirSign * Value * rotaryRange, axisN);
         }
         else
         {
@@ -223,6 +246,7 @@ public class VRFaderKnob : MonoBehaviour, ISimResettable
         completed = false;
         activeInteractor = null;
         attach = null;
+        turn = startValue * rotaryRange;
         SetValueInternal(startValue, false);
     }
 }
