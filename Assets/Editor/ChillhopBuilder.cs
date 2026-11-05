@@ -18,6 +18,7 @@ public static class ChillhopBuilder
 {
     const string ScenePath = "Assets/Scenes/ChillhopCrate.unity";
     const string MatDir = "Assets/Materials/Chillhop";
+    static readonly Vector3 RigOffset = new Vector3(0.16f, 0f, 0.16f);
     const string AudioDir = "Assets/Audio/Chillhop/";
     const string RigPrefab = "Assets/Samples/XR Interaction Toolkit/3.6.0/Hands Interaction Demo/Prefabs/XR Origin Hands (XR Rig).prefab";
 
@@ -54,6 +55,8 @@ public static class ChillhopBuilder
         BuildMixer(out VRPokeButton pad, out VRFaderKnob knob, out VRFaderKnob fader);
         var audio = BuildAudio(rig);
         var ui = BuildUi(out VRPokeButton startBtn, out VRPokeButton restartBtn);
+        foreach (var panelRoot in new[] { ui.intro, ui.checklist, ui.complete })
+            if (panelRoot != null) panelRoot.transform.position += RigOffset;   // panels were laid out for a head at the origin
         var mgr = BuildManager(audio, ui, lights);
 
         Wire(mgr, audio, snapZone, spinner, tonearm, pad, knob, fader, startBtn, restartBtn);
@@ -120,7 +123,7 @@ public static class ChillhopBuilder
         var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(RigPrefab);
         var rig = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
         rig.name = "XR Origin Hands (XR Rig)";
-        rig.transform.position = Vector3.zero;
+        rig.transform.position = RigOffset;   // stand a little forward and right so the whole deck is within arm's reach
 
         // The hand interactors read pinch/select from the XRI Default Input Actions; nothing enables them unless an
         // InputActionManager does (the sample scenes include one, the rig prefab does not).
@@ -349,8 +352,8 @@ public static class ChillhopBuilder
         var pinchZone = new GameObject("PinchZone");     // thick trigger so a pinch near the record counts
         pinchZone.transform.SetParent(vinyl.transform, false);
         var pz = pinchZone.AddComponent<BoxCollider>();
-        pz.isTrigger = true;
-        pz.size = new Vector3(0.32f, 0.08f, 0.32f);
+        pz.center = new Vector3(0, 0.04f, 0);       // extends upward only, so the record still rests at its old height
+        pz.size = new Vector3(0.30f, 0.08f, 0.30f);
         var rb = vinyl.AddComponent<Rigidbody>();
         rb.mass = 0.2f;
         rb.linearDamping = 1f;
@@ -360,6 +363,7 @@ public static class ChillhopBuilder
         Prim(PrimitiveType.Cylinder, "Disc", vinyl.transform, Vector3.zero, new Vector3(0.30f, 0.0015f, 0.30f), vinylMat);
         Prim(PrimitiveType.Cylinder, "Label", vinyl.transform, new Vector3(0, 0.0016f, 0), new Vector3(0.1f, 0.0005f, 0.1f), labelMat);
         var grab = vinyl.AddComponent<XRGrabInteractable>();
+        vinyl.AddComponent<HeldSurfaceClamp>();
         grab.movementType = XRBaseInteractable.MovementType.Kinematic;
         grab.smoothPosition = true;
         grab.smoothPositionAmount = 5f;
@@ -426,7 +430,7 @@ public static class ChillhopBuilder
         float top = 0.06f;
 
         // MPC pad
-        var padObj = Empty("PadButton", mixer, new Vector3(-0.1f, top, -0.12f));
+        var padObj = Empty("PadButton", mixer, new Vector3(-0.1f, top, -0.06f));
         var padTrig = padObj.AddComponent<BoxCollider>();
         padTrig.isTrigger = true;
         padTrig.center = new Vector3(0, 0.02f, 0);
@@ -446,7 +450,7 @@ public static class ChillhopBuilder
         SetRef(pad, "pressClip", AssetDatabase.LoadAssetAtPath<AudioClip>(AudioDir + "pad_hit.wav"));
 
         // Filter knob
-        var knobObj = Empty("FilterKnob", mixer, new Vector3(0.1f, top + 0.03f, -0.12f));
+        var knobObj = Empty("FilterKnob", mixer, new Vector3(0.1f, top + 0.03f, -0.06f));
         var kc = knobObj.AddComponent<CapsuleCollider>();
         kc.radius = 0.075f;
         kc.height = 0.12f;
@@ -460,7 +464,7 @@ public static class ChillhopBuilder
         for (int i = 0; i <= 3; i++)
         {
             float a = i * 30f * Mathf.Deg2Rad;
-            Prim(PrimitiveType.Cube, "Tick" + i, mixer, new Vector3(0.1f + Mathf.Sin(a) * 0.065f, top + 0.002f, -0.12f + Mathf.Cos(a) * 0.065f), new Vector3(0.006f, 0.002f, 0.006f), white);
+            Prim(PrimitiveType.Cube, "Tick" + i, mixer, new Vector3(0.1f + Mathf.Sin(a) * 0.065f, top + 0.002f, -0.06f + Mathf.Cos(a) * 0.065f), new Vector3(0.006f, 0.002f, 0.006f), white);
         }
         knob = knobObj.AddComponent<VRFaderKnob>();
         SetEnum(knob, "mode", (int)VRFaderKnob.ControlMode.Rotary);
@@ -470,10 +474,10 @@ public static class ChillhopBuilder
         SetEnum(knob, "requiredStep", (int)SimStep.Step4_FilterKnob);
 
         // Master fader: a flat DJ-style channel fader lying on the board, sliding left (quiet) to right (loud)
-        var panel = Empty("FaderTrack", mixer, new Vector3(0.0f, top + 0.004f, 0.15f));
+        var panel = Empty("FaderTrack", mixer, new Vector3(0.0f, top + 0.004f, -0.185f));
         Prim(PrimitiveType.Cube, "FaderSlot", panel.transform, new Vector3(0, 0, 0), new Vector3(0.23f, 0.002f, 0.009f), track);
         for (int i = 0; i <= 8; i++)
-            Prim(PrimitiveType.Cube, "FaderTick" + i, panel.transform, new Vector3(-0.1f + i * 0.025f, -0.001f, -0.03f), new Vector3(0.002f, 0.0015f, i % 2 == 0 ? 0.016f : 0.009f), white);
+            Prim(PrimitiveType.Cube, "FaderTick" + i, panel.transform, new Vector3(-0.1f + i * 0.025f, -0.001f, 0.03f), new Vector3(0.002f, 0.0015f, i % 2 == 0 ? 0.016f : 0.009f), white);
         var fh = Empty("FaderHandle", panel.transform, new Vector3(-0.1f, 0.009f, 0));
         var fc = fh.AddComponent<BoxCollider>();
         fc.size = new Vector3(0.09f, 0.08f, 0.11f);
