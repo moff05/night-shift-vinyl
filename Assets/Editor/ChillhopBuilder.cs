@@ -348,7 +348,7 @@ public static class ChillhopBuilder
         // Vinyl record
         var vinyl = new GameObject("VinylRecord") { tag = "Vinyl" };
         vinyl.transform.SetParent(deck, false);
-        vinyl.transform.position = new Vector3(0.78f, 1.05f + 0.008f, 0.62f);
+        vinyl.transform.position = new Vector3(0.78f, 1.05f + 0.008f, 0.585f);   // forward of the leaning sleeves so it sits clear of them
         var col = vinyl.AddComponent<BoxCollider>();
         col.size = new Vector3(0.30f, 0.012f, 0.30f);
         var pinchZone = new GameObject("PinchZone");     // thick trigger so a pinch near the record counts
@@ -360,8 +360,9 @@ public static class ChillhopBuilder
         rb.mass = 0.2f;
         rb.linearDamping = 1f;
         rb.angularDamping = 2f;
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        rb.isKinematic = true;                      // HeldSurfaceClamp owns the record's motion: no falling, throwing or tunnelling
+        rb.useGravity = false;
+        rb.interpolation = RigidbodyInterpolation.None;
         Prim(PrimitiveType.Cylinder, "Disc", vinyl.transform, Vector3.zero, new Vector3(0.30f, 0.0015f, 0.30f), vinylMat);
         Prim(PrimitiveType.Cylinder, "Label", vinyl.transform, new Vector3(0, 0.0016f, 0), new Vector3(0.1f, 0.0005f, 0.1f), labelMat);
         var grab = vinyl.AddComponent<XRGrabInteractable>();
